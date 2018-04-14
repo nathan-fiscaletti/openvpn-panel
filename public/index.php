@@ -71,7 +71,7 @@
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">      
             <li class="dropdown">
-                <span class="dropdown-toggle" data-toggle="dropdown"><b>Version 1.1</b></span>
+                <span class="dropdown-toggle" data-toggle="dropdown">Version 1.1</b></span>
             </li>
         </ul>
 
