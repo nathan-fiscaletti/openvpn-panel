@@ -1,0 +1,3 @@
+#!/bin/bash
+
+openvpn --version | sed -n 1p | awk '{print $2}'

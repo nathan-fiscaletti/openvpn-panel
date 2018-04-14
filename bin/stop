@@ -1,0 +1,4 @@
+#!/bin/bash
+
+for p in `screen -ls | grep OpenVPN | awk '{print $1}' | cut -d. -f1`; do kill -9 $p; done;
+screen -wipe

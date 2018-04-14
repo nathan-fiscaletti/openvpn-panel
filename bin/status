@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ "`pidof openvpn`" != "" ]]; then
+    echo "1";
+else
+    echo "0";
+fi
