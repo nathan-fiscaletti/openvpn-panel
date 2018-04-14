@@ -13,3 +13,9 @@ rm -rf /etc/openvpn/crl.pem
 cp /etc/openvpn/easy-rsa/pki/crl.pem /etc/openvpn/crl.pem
 
 rm -rf $CSTORE/$CLIENT.ovpn
+
+chown nobody:nogroup /etc/openvpn/crl.pem
+
+echo "Restarting Server..."
+. stop
+. start

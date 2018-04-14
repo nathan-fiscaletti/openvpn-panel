@@ -10,11 +10,15 @@ echo "<ca>" >> $CSTORE/$CLIENT.ovpn
 cat /etc/openvpn/easy-rsa/pki/ca.crt >> $CSTORE/$CLIENT.ovpn
 echo "</ca>" >> $CSTORE/$CLIENT.ovpn
 echo "<cert>" >> $CSTORE/$CLIENT.ovpn
-cat /etc/openvpn/easy-rsa/pki/issued/$1.crt >> $CSTORE/$CLIENT.ovpn
+cat /etc/openvpn/easy-rsa/pki/issued/$CLIENT.crt >> $CSTORE/$CLIENT.ovpn
 echo "</cert>" >> $CSTORE/$CLIENT.ovpn
 echo "<key>" >> $CSTORE/$CLIENT.ovpn
-cat /etc/openvpn/easy-rsa/pki/private/$1.key >> $CSTORE/$CLIENT.ovpn
+cat /etc/openvpn/easy-rsa/pki/private/$CLIENT.key >> $CSTORE/$CLIENT.ovpn
 echo "</key>" >> $CSTORE/$CLIENT.ovpn
 echo "<tls-auth>" >> $CSTORE/$CLIENT.ovpn
 cat /etc/openvpn/ta.key >> $CSTORE/$CLIENT.ovpn
 echo "</tls-auth>" >> $CSTORE/$CLIENT.ovpn
+
+echo "Restarting Server..."
+. stop
+. start
