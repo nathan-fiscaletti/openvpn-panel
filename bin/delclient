@@ -3,6 +3,8 @@
 CLIENT=$1
 CSTORE=$2
 
+MAINDIR=$PWD
+
 cd /etc/openvpn/easy-rsa/
 ./easyrsa --batch revoke $CLIENT
 ./easyrsa gen-crl
@@ -16,19 +18,9 @@ rm -rf $CSTORE/$CLIENT.ovpn
 
 chown nobody:nogroup /etc/openvpn/crl.pem
 
+cd $MAINDIR
+
 echo "Restarting Server..."
 
-for p in `screen -ls | grep ServerOpenVPN | awk '{print $1}' | cut -d. -f1`; do kill -9 $p; done;
-screen -wipe
-
-
-function read_config()
-{
-    echo $(awk -F "=" '/'$1'/ {print $2}' ./config/$2.ini) | tr -d ' ' 
-}
-
-for p in `screen -ls | grep ServerOpenVPN | awk '{print $1}' | cut -d. -f1`; do kill -9 $p; done;
-screen -wipe
-
-OVPN=`read_config 'ovpn' 'server'`
-screen -A -m -d -S ServerOpenVPN ./bin/ovpn $OVPN
+./bin/stop
+./bin/start
