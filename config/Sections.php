@@ -13,6 +13,11 @@ return [
         'nav'     => './content/navigation/LoggedIn.php'
     ],
 
+    'server_log' => [
+        'content' => './content/pages/ServerLog.php',
+        'nav'     => './content/navigation/LoggedIn.php'
+    ],
+
     // Client Management
 
     'add_client' => [

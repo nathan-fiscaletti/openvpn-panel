@@ -8,10 +8,7 @@
                     <a href="?section=server_information"><i class="fa fa-fw fa-info"></i> Server Information</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-wrench"></i> Server Settings</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-fw fa-history"></i> Server Log</a>
+                    <a href="?section=server_log"><i class="fa fa-fw fa-history"></i> Server Log</a>
                 </li>
             </ul>
         </li>
