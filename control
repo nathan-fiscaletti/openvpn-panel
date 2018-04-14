@@ -29,6 +29,10 @@ function main()
         screen -wipe
 
         echo "Stopped."
+    elif [[ "$1" == "--adduser" ]]; then
+        php ./bin/user.php -add $2 $3
+    elif [[ "$1" == "--deleteuser" ]]; then
+        php ./bin/user.php -delete $2
     fi
 }
 

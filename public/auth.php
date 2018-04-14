@@ -10,20 +10,21 @@ if (isset($_GET['logout']))
     exit;
 }
 
-if ($_POST['username'] == 'MrFisc')
-{
-    if ($_POST['password'] == 'Nath@n51095n')
-    {
-        $_SESSION['user']  = $_POST['username'];
-        $_SESSION['token'] = md5(date('Y.M.d').$_POST['username']);
+if (! file_exists('./users.json')) {
+    header("Location: index.php?badlogin");
+    exit;
+}
 
-        header("Location: index.php");
-        exit;
-    } else {
-        header("Location: index.php?badlogin");
-        exit;
-    }
+$users = json_decode(file_get_contents('./users.json'), true);
+
+if (md5($_POST['password']) == $users[$_POST['user']]) {
+    $_SESSION['user']  = $_POST['username'];
+    $_SESSION['token'] = md5(date('Y.M.d').$_POST['username']);
+
+    header("Location: index.php");
+    exit;
 } else {
     header("Location: index.php?badlogin");
+    exit;
 }
 
