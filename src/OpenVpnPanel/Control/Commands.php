@@ -26,7 +26,7 @@ class Commands
 
     public static function GetAllClients()
     {
-        $data = shell_exect('./bin/client list /root');
+        $data = shell_exec('./bin/client list /root');
         
         if (strpos($data, ',') !== false) {
             return explode(',', $data);
