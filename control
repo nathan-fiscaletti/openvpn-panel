@@ -14,8 +14,8 @@ function main()
         OVPN=`read_config 'ovpn' 'server'`
 
         echo "Initialized OpenVPN with config '$OVPN'..."
-        screen -A -m -d -S OpenVPN ./bin/ovpn $OVPN
-        echo "OpenVPN Running (Screen OpenVPN)."
+        screen -A -m -d -S ServerOpenVPN ./bin/ovpn $OVPN
+        echo "OpenVPN Running (Screen ServerOpenVPN)."
 
         echo "Starting OpenVPNPanel Server..."
         screen -A -m -d -S PanelOpenVPN ./bin/daemon $HOST $PORT
