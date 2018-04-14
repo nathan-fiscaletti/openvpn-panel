@@ -41,7 +41,7 @@
     //$content    = './content/pages/AddClient.php';
 ?>
 
-<title>Damage Inc. Sql VPN Control Panel</title>
+<title>Open VPN Control Panel</title>
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="./css/navigation.css" rel="stylesheet" id="sidebare-css">
 <link href="./css/signin.css" rel="stylesheet" id="signing-css">
@@ -65,8 +65,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="http://cijulenlinea.ucr.ac.cr/dev-users/">
-                <img src="https://dmg-inc.com/uploads/2018/01/DIBanner-LightTransBG-100.png" alt="LOGO" style='width:200px;height:50px;'>
-                <!--<h2>DamageInc SQL VPN Control Panel</h2>-->
+                <h2>Open VPN Control Panel</h2>
             </a>
         </div>
         <!-- Top Menu Items -->
