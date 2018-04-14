@@ -15,7 +15,7 @@
                 Server Information
             </h3>
             <b>
-                Server Status: <br />
+                Server Status<br />
                 <?php
                     if (trim($status) == "1") {
                         ?>

@@ -2,7 +2,7 @@
 
 function main()
 {
-    if [[ "$1" == "-start" ]]; then
+    if [[ "$1" == "--start" ]]; then
         echo "Stopping OpenVPN Server..."
         kill -9 `pidof openvpn`
         echo "Stopping any existing OpenVPNPanel instances..."
@@ -21,7 +21,7 @@ function main()
         screen -A -m -d -S PanelOpenVPN ./bin/daemon $HOST $PORT
         echo "Server running on $HOST:$PORT (Screen PanelOpenVPN)."
 
-    elif [[ "$1" == "-stop" ]]; then
+    elif [[ "$1" == "--stop" ]]; then
         echo "Stopping OpenVPN Server..."
         kill -9 `pidof openvpn`
         echo "Stopping any existing OpenVPNPanel instances..."
