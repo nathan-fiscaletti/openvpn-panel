@@ -9,6 +9,11 @@ class Commands
         shell_exec('./bin/start');
     }
 
+    public static function StopServer()
+    {
+        shell_exec('./bin/stop');
+    }
+
     public static function GetVersion()
     {
         return shell_exec('./bin/version');

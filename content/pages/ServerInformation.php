@@ -42,15 +42,19 @@
             <?php
                 if (trim($status) == "1") {
                     ?>
-                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">
-                            Stop Server
-                        </button>
+                        <a href='manage_server.php?action=stop' style='text-decoration: none;'>
+                            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">
+                                Stop Server
+                            </button>
+                        </a>
                     <?php
                 } else {
                     ?>
-                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">
-                            Start Server
-                        </button>
+                        <a href='manage_server.php?action=start' style='text-decoration: none;'>
+                            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">
+                                Start Server
+                            </button>
+                        </a>
                     <?php
                 }
             ?>

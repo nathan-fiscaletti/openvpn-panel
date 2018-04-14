@@ -17,7 +17,6 @@
     {
         if (! authenticate_token($_SESSION['user'], $_SESSION['token']))
         {
-            echo "invalid token";
             unset($_SESSION['user']);
             unset($_SESSION['token']);
             $section = 'login';
