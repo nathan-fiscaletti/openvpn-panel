@@ -1,0 +1,34 @@
+#!/bin/bash
+
+function main()
+{
+    if [[ "$1" == "-start" ]]; then
+        echo "Stopping OpenVPN Server..."
+        kill -9 `pidof openvpn`
+        echo "Stopping any existing OpenVPNPanel instances..."
+        for p in `screen -ls | grep OpenVPNPanel | awk '{print $1}' | cut -d. -f1`; do kill -9 $p; done;
+        screen -wipe
+
+        PORT=`read_config 'port' 'server'`
+        HOST=`read_config 'host' 'server'`
+
+        screen -A -m -d -S OpenVPNPanel 'cd public;while true; do php -S $HOST:$PORT; echo "Restarting Server..."; done;'
+        echo "Server running on $HOST:$PORT (Screen OpenVPNPanel)."
+        echo "To start your OpenVPN server, please login to the panel."
+    elif [[ "$1" == "-stop" ]]; then
+        echo "Stopping OpenVPN Server..."
+        kill -9 `pidof openvpn`
+        echo "Stopping any existing OpenVPNPanel instances..."
+        for p in `screen -ls | grep OpenVPNPanel | awk '{print $1}' | cut -d. -f1`; do kill -9 $p; done;
+        screen -wipe
+
+        echo "Stopped."
+    fi
+}
+
+function read_config()
+{
+    echo $(awk -F "=" '/'$1'/ {print $2}' ./config/$2.ini) | tr -d ' ' 
+}
+
+main $@
