@@ -36,4 +36,9 @@ class Commands
 
         return [$data];
     }
+
+    public static function GetClientConfiguration($client)
+    {
+        return file_get_contents('\/root\/'.$client.'.ovpn');
+    }
 }

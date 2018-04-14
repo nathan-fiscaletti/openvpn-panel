@@ -20,7 +20,6 @@
             <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-user"></i> Manager Clients<i class="fa fa-fw fa-angle-down pull-right"></i></a>
             <ul id="submenu-2" class="collapse">
                 <li><a href="?section=add_client"><i class="fa fa-user-plus"></i> Add Client</a></li>
-                <li><a href="#"><i class="fa fa-user-times"></i> Remove Client</a></li>
                 <li><a href="?section=list_clients"><i class="fa fa-users"></i> List Clients</a></li>
             </ul>
         </li>

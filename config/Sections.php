@@ -23,5 +23,10 @@ return [
     'list_clients' => [
         'content' => './content/pages/ListClients.php',
         'nav'     => './content/navigation/LoggedIn.php'
-    ]
+    ],
+
+    'manage_client' => [
+        'content' => './content/pages/ManageClient.php',
+        'nav'     => './content/navigation/LoggedIn.php'  
+    ],
 ];
