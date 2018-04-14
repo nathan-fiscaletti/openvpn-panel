@@ -26,12 +26,13 @@ class Commands
 
     public static function GetClientCount()
     {
-        return shell_exec('./bin/client count /root');
+        $webconfig = include_once './config/WebConfig.php'
+        return shell_exec('./bin/client count '.$webconfig['client_storage']);
     }
 
     public static function GetAllClients()
     {
-        $data = shell_exec('./bin/client list /root');
+        $data = shell_exec('./bin/client list '.$webconfig['client_storage']);
         
         $data = str_replace('.ovpn', '', $data);
 
@@ -44,6 +45,6 @@ class Commands
 
     public static function GetClientConfiguration($client)
     {
-        return file_get_contents('/root/'.$client.'.ovpn');
+        return file_get_contents($webconfig['client_storage'].'/'.$client.'.ovpn');
     }
 }
