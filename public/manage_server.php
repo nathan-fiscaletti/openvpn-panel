@@ -31,6 +31,8 @@
                     exit;
                 } else if ($_GET['action'] == 'stop') {
                     Commands::StopServer();
+                    header("Location: /?section=server_information");
+                    exit;
                 } else {
                     header("Location: /?section=login");
                     exit;
