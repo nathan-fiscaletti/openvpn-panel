@@ -2,6 +2,8 @@
 
 session_start();
 
+chdir('../');
+
 if (isset($_GET['logout']))
 {
     unset($_SESSION['token']);
@@ -16,10 +18,6 @@ if (! file_exists('./users.json')) {
 }
 
 $users = json_decode(file_get_contents('./users.json'), true);
-
-echo $_POST['password'];
-echo $users[$_POST['user']]['password'];
-exit;
 
 if (md5($_POST['password']) == $users[$_POST['user']]['password']) {
     $_SESSION['user']  = $_POST['username'];
