@@ -13,6 +13,8 @@ if (isset($_GET['logout']))
 }
 
 if (! file_exists('./users.json')) {
+    echo "No file."
+    exit;
     header("Location: index.php?badlogin");
     exit;
 }
