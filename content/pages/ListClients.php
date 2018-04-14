@@ -13,7 +13,7 @@
                 <a href='?section=manage_client&client=<?php echo $client; ?>' style='text-decoration: none;'>
                     <button class="btn btn-lg btn-primary btn-block btn-signin">
                         <?php echo $client; ?>
-                    </button>
+                    </button><br />
                 </a>
             <?php } ?>
         </div><!-- /card-container -->
