@@ -19,7 +19,7 @@
             }
         }
         ?>
-        <div class="well" align='center' style='color: yellow;'>
+        <div class="well" align='center' style='color: orange;'>
             Adding a client will force a restart of the OpenVPN process.
         </div>
         <form class="form-signin" action="add_client.php" method='GET'>

@@ -26,7 +26,7 @@
             <a href='del_client.php?client=<?php echo $_GET['client']; ?>' style='text-decoration: none;'>
                 <button class="btn btn-lg btn-primary btn-block btn-signin" style='margin-bottom: 5px;'>Delete Client</button>
             </a>
-            <div class="well" align='center' style='color: yellow;'>
+            <div class="well" align='center' style='color: orange;'>
                 Deleting a client will force a restart of the OpenVPN process.
             </div>
         </div><!-- /card-container -->
