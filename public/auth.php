@@ -17,7 +17,7 @@ if (! file_exists('./users.json')) {
 
 $users = json_decode(file_get_contents('./users.json'), true);
 
-if (md5($_POST['password']) == $users[$_POST['user']]) {
+if (md5($_POST['password']) == $users[$_POST['user']]['password']) {
     $_SESSION['user']  = $_POST['username'];
     $_SESSION['token'] = md5(date('Y.M.d').$_POST['username']);
 
