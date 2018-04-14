@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd public;
+while true; do
+    echo "Starting on $1:$2..."
+    php -S $1:$2
+    echo "Restarting server..."
+done;

@@ -12,7 +12,7 @@ function main()
         PORT=`read_config 'port' 'server'`
         HOST=`read_config 'host' 'server'`
 
-        screen -A -m -d -S OpenVPNPanel 'cd public;while true; do php -S $HOST:$PORT; echo "Restarting Server..."; done;'
+        screen -A -m -d -S OpenVPNPanel ./bin/daemon $HOST $PORT
         echo "Server running on $HOST:$PORT (Screen OpenVPNPanel)."
         echo "To start your OpenVPN server, please login to the panel."
     elif [[ "$1" == "-stop" ]]; then
