@@ -44,7 +44,7 @@ class Commands
     public static function DeleteClient($client)
     {
         $webconfig = include_once './config/WebConfig.php';
-        if (file_exists($webconfig['client_storage'].'/'.$client.'.ovpn')) {
+        if (! file_exists($webconfig['client_storage'].'/'.$client.'.ovpn')) {
             return 0;
         }
 
