@@ -7,10 +7,10 @@
 ?>
 
 <div class="container">
-    <?php foreach ($clients as $client) { ?>
         <div class="card card-container">
-            <div align='center'><h3><?php echo $client; ?></h3></div>
-            <button class="btn btn-lg btn-primary btn-block btn-signin">Manage Client</button>
+            <div align='center'><h3>Clients</h3></div>
+            <?php foreach ($clients as $client) { ?>
+                <button class="btn btn-lg btn-primary btn-block btn-signin"><?php echo $client; ?></button>
+            <?php } ?>
         </div><!-- /card-container -->
-    <?php } ?>
 </div><!-- /container -->
