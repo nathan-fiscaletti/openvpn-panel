@@ -36,7 +36,10 @@ if (! empty($_SESSION['user']) && ! empty($_SESSION['token']))
                 header('Location: index.php');
                 exit;            
             }
-        }         
+        } else {
+            header('Location: index.php');
+            exit;
+        }  
     }
 } else {
     header('Location: index.php');
