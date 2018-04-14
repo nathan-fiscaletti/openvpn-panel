@@ -30,9 +30,9 @@ function main()
 
         echo "Stopped."
     elif [[ "$1" == "--adduser" ]]; then
-        php ./bin/user.php -add $2 $3
+        php ./bin/users.php -add $2 $3
     elif [[ "$1" == "--deleteuser" ]]; then
-        php ./bin/user.php -delete $2
+        php ./bin/users.php -delete $2
     fi
 }
 
