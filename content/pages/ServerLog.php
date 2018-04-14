@@ -1,5 +1,7 @@
 <div class="container">
         <div class="well" align='center'>
-            <?php echo file_get_contents('/etc/openvpn/server.log'); ?>
+            <pre>
+                <?php echo file_get_contents('/etc/openvpn/server.log'); ?>
+            </pre>
         </div>
 </div><!-- /container -->
