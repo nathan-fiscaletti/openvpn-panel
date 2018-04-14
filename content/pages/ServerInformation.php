@@ -40,7 +40,7 @@
             </b>
             <br /></br />
             <?php
-                if ($status == "1") {
+                if (trim($status) == "1") {
                     ?>
                         <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">
                             Stop Server

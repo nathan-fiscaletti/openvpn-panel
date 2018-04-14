@@ -18,5 +18,10 @@ return [
     'add_client' => [
         'content' => './content/pages/AddClient.php',
         'nav'     => './content/navigation/LoggedIn.php'
+    ],
+
+    'list_clients' => [
+        'content' => './content/pages/ListClients.php',
+        'nav'     => './content/navigation/LoggedIn.php'
     ]
 ];

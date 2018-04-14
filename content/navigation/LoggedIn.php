@@ -21,7 +21,7 @@
             <ul id="submenu-2" class="collapse">
                 <li><a href="?section=add_client"><i class="fa fa-user-plus"></i> Add Client</a></li>
                 <li><a href="#"><i class="fa fa-user-times"></i> Remove Client</a></li>
-                <li><a href="#"><i class="fa fa-users"></i> List Clients</a></li>
+                <li><a href="?section=list_clients"><i class="fa fa-users"></i> List Clients</a></li>
             </ul>
         </li>
         <li>
