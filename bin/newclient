@@ -20,5 +20,18 @@ cat /etc/openvpn/ta.key >> $CSTORE/$CLIENT.ovpn
 echo "</tls-auth>" >> $CSTORE/$CLIENT.ovpn
 
 echo "Restarting Server..."
-. stop
-. start
+
+for p in `screen -ls | grep ServerOpenVPN | awk '{print $1}' | cut -d. -f1`; do kill -9 $p; done;
+screen -wipe
+
+
+function read_config()
+{
+    echo $(awk -F "=" '/'$1'/ {print $2}' ./config/$2.ini) | tr -d ' ' 
+}
+
+for p in `screen -ls | grep ServerOpenVPN | awk '{print $1}' | cut -d. -f1`; do kill -9 $p; done;
+screen -wipe
+
+OVPN=`read_config 'ovpn' 'server'`
+screen -A -m -d -S ServerOpenVPN ./bin/ovpn $OVPN
