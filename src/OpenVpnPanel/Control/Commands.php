@@ -37,7 +37,7 @@ class Commands
             return 0;
         }
 
-        shell_exec('./bin/addclient '.$client.' '.$webconfig['client_storage']);
+        shell_exec('./bin/newclient '.$client.' '.$webconfig['client_storage']);
         return 1;
     }
 
@@ -48,7 +48,7 @@ class Commands
             return 0;
         }
 
-        shell_exec('./bin/dellclient '.$client.' '.$webconfig['client_storage']);
+        shell_exec('./bin/delclient '.$client.' '.$webconfig['client_storage']);
         return 1;
     }
 
