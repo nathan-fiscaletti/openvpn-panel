@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ "$1" == "count" ]]; then
-    echo `ls -q $2 | wc -l`
+    echo `ls -q $2 | grep ovpn | wc -l`
 elif [[ "$1" == "list" ]]; then
     echo `ls $2 | grep ovpn | paste -sd "," -`
 fi
