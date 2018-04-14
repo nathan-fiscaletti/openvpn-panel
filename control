@@ -6,7 +6,7 @@ function main()
         echo "Stopping OpenVPN Server..."
         kill -9 `pidof openvpn`
         echo "Stopping any existing OpenVPNPanel instances..."
-        for p in `screen -ls | grep OpenVPNPanel | awk '{print $1}' | cut -d. -f1`; do kill -9 $p; done;
+        for p in `screen -ls | grep PanelOpenVPN | awk '{print $1}' | cut -d. -f1`; do kill -9 $p; done;
         screen -wipe
 
         PORT=`read_config 'port' 'server'`
@@ -16,16 +16,16 @@ function main()
         echo "Initialized OpenVPN with config '$OVPN'..."
         screen -A -m -d -S OpenVPN ./bin/ovpn $OVPN
         echo "OpenVPN Running (Screen OpenVPN)."
-        
+
         echo "Starting OpenVPNPanel Server..."
-        screen -A -m -d -S OpenVPNPanel ./bin/daemon $HOST $PORT
-        echo "Server running on $HOST:$PORT (Screen OpenVPNPanel)."
+        screen -A -m -d -S PanelOpenVPN ./bin/daemon $HOST $PORT
+        echo "Server running on $HOST:$PORT (Screen PanelOpenVPN)."
 
     elif [[ "$1" == "-stop" ]]; then
         echo "Stopping OpenVPN Server..."
         kill -9 `pidof openvpn`
         echo "Stopping any existing OpenVPNPanel instances..."
-        for p in `screen -ls | grep OpenVPNPanel | awk '{print $1}' | cut -d. -f1`; do kill -9 $p; done;
+        for p in `screen -ls | grep PanelOpenVPN | awk '{print $1}' | cut -d. -f1`; do kill -9 $p; done;
         screen -wipe
 
         echo "Stopped."
