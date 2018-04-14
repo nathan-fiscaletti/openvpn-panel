@@ -64,9 +64,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://cijulenlinea.ucr.ac.cr/dev-users/">
+            <span class="navbar-brand">
                 <h2>Open VPN Control Panel</h2>
-            </a>
+            </span>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">      
