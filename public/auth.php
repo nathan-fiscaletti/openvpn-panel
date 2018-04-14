@@ -21,7 +21,8 @@ $users = json_decode(file_get_contents('./users.json'), true);
 
 print_r($users);
 echo $users[$_POST['user']]['password'];
-echo $_POST['password'];
+echo "<br />";
+echo md5($_POST['password']);
 exit;
 
 if (md5($_POST['password']) == $users[$_POST['user']]['password']) {
