@@ -18,10 +18,10 @@ if (! empty($_SESSION['user']) && ! empty($_SESSION['token']))
         header('Location: index.php');
         exit;
     } else {
-        if (isset($_GET['user']))
+        if (isset($_GET['client']))
         {
             $webconfig = include_once './config/WebConfig.php';
-            $file = $webconfig['client_storage'].'/'.$_GET['user'].'.ovpn';
+            $file = $webconfig['client_storage'].'/'.$_GET['client'].'.ovpn';
             if (file_exists($file)) {
                 header('Content-Description: File Transfer');
                 header('Content-Type: application/octet-stream');
