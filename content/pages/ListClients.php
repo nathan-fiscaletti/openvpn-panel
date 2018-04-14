@@ -14,9 +14,9 @@
             </div>
             <?php foreach ($clients as $client) { ?>
                 <a href='?section=manage_client&client=<?php echo $client; ?>' style='text-decoration: none;'>
-                    <button class="btn btn-lg btn-primary btn-block btn-signin">
+                    <button class="btn btn-lg btn-primary btn-block btn-signin" style='margin-bottom: 5px;'>
                         <?php echo $client; ?>
-                    </button><br />
+                    </button>
                 </a>
             <?php } ?>
         </div><!-- /card-container -->
