@@ -13,13 +13,15 @@ if (isset($_GET['logout']))
 }
 
 if (! file_exists('./users.json')) {
-    echo "No file.";
-    exit;
     header("Location: index.php?badlogin");
     exit;
 }
 
 $users = json_decode(file_get_contents('./users.json'), true);
+
+echo $users[$_POST['user']]['password'];
+echo $_POST['password'];
+exit;
 
 if (md5($_POST['password']) == $users[$_POST['user']]['password']) {
     $_SESSION['user']  = $_POST['username'];
