@@ -19,9 +19,9 @@
             }
         }
         ?>
-        <form class="form-signin">
+        <form class="form-signin" action="add_client.php" method='GET'>
             <span id="reauth-email" class="reauth-email"></span>
-            <input type="text" id="inputUsername" class="form-control" placeholder="Name" required autofocus>
+            <input type="text" id="inputUsername" class="form-control" name='client' placeholder="Name" required autofocus>
             <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Add</button>
         </form><!-- /form -->
     </div><!-- /card-container -->
