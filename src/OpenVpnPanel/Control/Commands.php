@@ -46,6 +46,7 @@ class Commands
 
     public static function GetClientConfiguration($client)
     {
+        $webconfig = include_once './config/WebConfig.php';
         return file_get_contents($webconfig['client_storage'].'/'.$client.'.ovpn');
     }
 }
