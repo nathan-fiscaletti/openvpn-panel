@@ -30,6 +30,28 @@ class Commands
         return shell_exec('./bin/client count '.$webconfig['client_storage']);
     }
 
+    public static function AddNewClient($client)
+    {
+        $webconfig = include_once './config/WebConfig.php';
+        if (file_exists($webconfig['client_storage'].'/'.$client.'.ovpn')) {
+            return 0;
+        }
+
+        shell_exec('./bin/addclient '.$client.' '.$webconfig['client_storage']);
+        return 1;
+    }
+
+    public static function DeleteClient($client)
+    {
+        $webconfig = include_once './config/WebConfig.php';
+        if (file_exists($webconfig['client_storage'].'/'.$client.'.ovpn')) {
+            return 0;
+        }
+
+        shell_exec('./bin/dellclient '.$client.' '.$webconfig['client_storage']);
+        return 1;
+    }
+
     public static function GetAllClients()
     {
         $webconfig = include_once './config/WebConfig.php';

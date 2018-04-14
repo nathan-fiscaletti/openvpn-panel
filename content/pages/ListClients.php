@@ -9,6 +9,17 @@
 <div class="container">
         <div class="card card-container">
             <div align='center'><h3>Clients</h3><br /></div>
+            <?php 
+            if (isset($_GET['deleted'])) {
+                if ($_GET['deleted'] == '1') {
+                    ?>
+                        <div class="well" align='center' style='color: green;'>
+                            Successfully deleted client!
+                        </div>
+                    <?php
+                }
+            }
+            ?>
             <div class="well" align='center'>
                 Click on a client to open it's management panel.
             </div>

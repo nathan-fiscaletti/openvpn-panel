@@ -23,7 +23,8 @@
             <a href='download_client.php?client=<?php echo $_GET['client']; ?>' style='text-decoration: none;'>
                 <button class="btn btn-lg btn-primary btn-block btn-signin" style='margin-bottom: 5px;'>Download Client Configuration</button>
             </a>
-            <button class="btn btn-lg btn-primary btn-block btn-signin">Manage Routes For Client</button>
-            <button class="btn btn-lg btn-primary btn-block btn-signin">Delete Client</button>
+            <a href='del_client.php?client=<?php echo $_GET['client']; ?>' style='text-decoration: none;'>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" style='margin-bottom: 5px;'>Delete Client</button>
+            </a>
         </div><!-- /card-container -->
 </div><!-- /container -->
