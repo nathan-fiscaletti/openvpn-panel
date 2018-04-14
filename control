@@ -13,8 +13,8 @@ function main()
         HOST=`read_config 'host' 'server'`
         OVPN=`read_config 'ovpn' 'server'`
 
-        screen -A -m -d -S OpenVPN /etc/openvpn/openvpn $OVPN
-        echo "Initialized OpenVPN with config '$3'"
+        screen -A -m -d -S OpenVPN openvpn $OVPN
+        echo "Initialized OpenVPN with config '$OVPN'"
         screen -A -m -d -S OpenVPNPanel ./bin/daemon $HOST $PORT
         echo "Server running on $HOST:$PORT (Screen OpenVPNPanel)."
 
