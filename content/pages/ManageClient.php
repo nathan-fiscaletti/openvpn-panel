@@ -4,7 +4,7 @@
         exit;
     }
 
-    if (! file_exists('\/root/'.$_GET['client'].'.ovpn')) {
+    if (! file_exists('/root/'.$_GET['client'].'.ovpn')) {
         header('Location: ?server_information');
         exit;
     }
