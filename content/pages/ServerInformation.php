@@ -1,5 +1,5 @@
 <?php
-    include_once './vendor/autoload.php';g
+    include_once './vendor/autoload.php';
 
     use OpenVpnPanel\Control\Commands;
 
@@ -15,9 +15,9 @@
                 Server Information
             </h3>
             <b>
-                Server Status: <?php echo $status; ?><br />
+                Server Status: <br />
                 <?php
-                    if ($status == "1") {
+                    if (trim($status) == "1") {
                         ?>
                             <span style='color: green;' class='fa fa-check-square'> Running</span>
                         <?php
