@@ -11,10 +11,13 @@ function main()
 
         PORT=`read_config 'port' 'server'`
         HOST=`read_config 'host' 'server'`
+        OVPN=`read_config 'ovpn' 'server'`
 
+        screen -A -m -d -S OpenVPN /etc/openvpn $3
+        echo "Initialized OpenVPN with config '$3'"
         screen -A -m -d -S OpenVPNPanel ./bin/daemon $HOST $PORT
         echo "Server running on $HOST:$PORT (Screen OpenVPNPanel)."
-        echo "To start your OpenVPN server, please login to the panel."
+        
     elif [[ "$1" == "-stop" ]]; then
         echo "Stopping OpenVPN Server..."
         kill -9 `pidof openvpn`
