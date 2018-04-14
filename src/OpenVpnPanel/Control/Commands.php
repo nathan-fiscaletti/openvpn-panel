@@ -28,6 +28,8 @@ class Commands
     {
         $data = shell_exec('./bin/client list /root');
         
+        $data = str_replace('.ovpn', '', $data);
+
         if (strpos($data, ',') !== false) {
             return explode(',', $data);
         }
