@@ -65,7 +65,7 @@
                 <span class="icon-bar"></span>
             </button>
             <span class="navbar-brand">
-                <h2>Open VPN Control Panel</h2>
+                <h2>OpenVPN Panel</h2>
             </span>
         </div>
         <!-- Top Menu Items -->
