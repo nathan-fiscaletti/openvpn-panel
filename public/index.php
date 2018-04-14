@@ -71,7 +71,7 @@
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">      
             <li class="dropdown">
-                <span class="dropdown-toggle" data-toggle="dropdown">Version 1.1</b></span>
+                <a href="https://git.nathanf.tk/openvpn-panel" target="_top" class="dropdown-toggle" data-toggle="dropdown">Version 1.1</b></a>
             </li>
         </ul>
 
