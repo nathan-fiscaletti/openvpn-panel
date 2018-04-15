@@ -11,14 +11,14 @@ if (! ($argv[1] == '-add' || $argv[1] == '-delete'))
 
 if ($argv[1] == '-add') {
     if (sizeof($argv) < 4) {
-        echo "Usage: openvpnpanel -adduser [username] [password]".PHP_EOL;
+        echo "Usage: openvpnpanel --adduser [username] [password]".PHP_EOL;
         exit(1);
     }
 
     addUser($argv[2], $argv[3]);
 } else if ($argv[1] == '-delete') {
     if (sizeof($argv) < 3) {
-        echo "Usage: openvpnpanel -deleteuser [username]".PHP_EOL;
+        echo "Usage: openvpnpanel --deleteuser [username]".PHP_EOL;
         exit(1);
     }
     deleteUser($argv[2]);
