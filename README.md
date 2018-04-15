@@ -1,25 +1,37 @@
 # OpenVPN Panel
 A web panel for controlling an OpenVPN server
 
+## Setup
+
+Add this direcory to your path variable either in `~/.bashrc` or using
+```
+export PATH=$PATH:/this/directory
+```
+
 ## Commands
 
 ### Start the panel
 ```
-./control --start
+openvpnpanel --start
 ```
 
 ### Stop the panel
 ```
-./control --stop
+openvpnpanel --stop
+```
+
+### Get the status of the Panel
+```
+openvpnpanel --status
 ```
 
 ### Add Panel User
 ```
-./control --adduser [name] [password]
+openvpnpanel --adduser [name] [password]
 ```
 
 ### Remove Panel User
 ```
-./control --deleteuser [name]
+openvpnpanel --deleteuser [name]
 ```
 
