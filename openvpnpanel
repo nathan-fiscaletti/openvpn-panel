@@ -55,6 +55,7 @@ function main()
         echo "  Server Control"
         echo "    --start    Starts the OpenVPN Panel and OpenVPN server using $OWNDIR/config/server.ini"
         echo "    --stop     Stops the OpenVPN Panel and OpenVPN server."
+        echo "    --status   Gets the status of OpenVPNPanel"
         echo ""
         echo "  User Management"
         echo "    --adduser       [username] [password]    Creates a new user using the specified username and password."
