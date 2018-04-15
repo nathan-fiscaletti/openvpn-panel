@@ -4,7 +4,9 @@
         exit;
     }
 
-    if (! file_exists('/root/'.$_GET['client'].'.ovpn')) {
+    $webconfig = include_once './config/WebConfig.php';
+
+    if (! file_exists($webconfig['client_storage'].'/'.$_GET['client'].'.ovpn')) {
         header('Location: ?server_information');
         exit;
     }
