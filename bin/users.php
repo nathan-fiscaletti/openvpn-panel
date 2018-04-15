@@ -2,19 +2,17 @@
 
 if (sizeof($argv) < 3) 
 {
-    echo "Usage: ./control [-adduser|-deleteuser] User [password]".PHP_EOL;
-    exit(1);
+    exit(2);
 }
 
 if (! ($argv[1] == '-add' || $argv[1] == '-delete'))
 {
-    echo "Usage: ./control [-adduser|-deleteuser] User [password]".PHP_EOL;
-    exit(1);   
+    exit(2); 
 }
 
 if ($argv[1] == '-add') {
     if (sizeof($argv) < 4) {
-        echo "Usage: ./control [-adduser|-deleteuser] User [password]".PHP_EOL;
+        echo "Usage: openvpnpanel -adduser [username] [password]".PHP_EOL;
         exit(1);          
     }
 
@@ -22,7 +20,7 @@ if ($argv[1] == '-add') {
 } else if ($argv[1] == '-delete') {
     deleteUser($argv[2]);
 } else {
-    echo "Usage: ./control [-adduser|-deleteuser] User [password]".PHP_EOL;
+    echo "Usage: openvpnpanel -deleteuser [username]".PHP_EOL;
     exit(1); 
 }
 
@@ -38,6 +36,8 @@ function addUser($user, $pass)
     ];
 
     file_put_contents('./users.json', json_encode($users, JSON_PRETTY_PRINT));
+
+    echo "OpenVPNPanel: Added user '$user'.".PHP_EOL;
 }
 
 function deleteUser($user)
@@ -50,4 +50,6 @@ function deleteUser($user)
     unset($users[$user]);
 
     file_put_contents('./users.json', json_encode($users, JSON_PRETTY_PRINT));
+
+    echo "OpenVPNPanel: Deleted user '$user'.".PHP_EOL;
 }
