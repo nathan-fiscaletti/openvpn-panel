@@ -21,6 +21,7 @@ cd openvpn-panel
 #        the same location that is configured in WebConfig.php, and the
 #        directory needs to be created before you start the OpenVPN Panel.
 #    Set `client_storage` in config/WebConfig.php
+#    Set `title` in config/WebConfig.php
 
 # Install Dependencies
 sudo apt-update

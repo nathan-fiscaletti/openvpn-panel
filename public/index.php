@@ -4,6 +4,7 @@
     session_start();
 
     $sections = include_once './config/Sections.php';
+    $web_config = include_once './config/WebConfig.php';
 
     // Default section is login
     $section  = 'login';
@@ -41,7 +42,7 @@
     //$content    = './content/pages/AddClient.php';
 ?>
 
-<title>Open VPN Control Panel</title>
+<title><?php echo $web_config['title']; ?></title>
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="./css/navigation.css" rel="stylesheet" id="sidebare-css">
 <link href="./css/signin.css" rel="stylesheet" id="signing-css">
@@ -65,7 +66,7 @@
                 <span class="icon-bar"></span>
             </button>
             <span class="navbar-brand">
-                <h2>OpenVPN Panel</h2>
+                <h2><?php echo $web_config['title']; ?></h2>
             </span>
         </div>
         <!-- Top Menu Items -->
