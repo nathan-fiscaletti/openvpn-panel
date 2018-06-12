@@ -31,6 +31,12 @@ composer install
 # Set up the OpenVPN Server
 ./bin/openvpn-install.sh
 
+# Running the OpenVPN installation script will
+# create a client configuration in the home directory.
+# You should delete this and allow the panel to manage
+# the certificates.
+rm ~/client.ovpn
+
 # Add the default user for the Panel
 # (Use a secure password)
 sudo openvpnpanel --adduser admin 'password'
