@@ -59,6 +59,10 @@ class Commands
         
         $data = str_replace('.ovpn', '', $data);
 
+        $data = trim($data);
+        if(strlen($data) < 1)
+            return [];
+
         if (strpos($data, ',') !== false) {
             return explode(',', $data);
         }
