@@ -4,12 +4,12 @@ A web panel for controlling an OpenVPN server
 ## Setup
 
 Add this direcory to your path variable either in `~/.bashrc` or using
-```
+```shell
 export PATH=$PATH:/this/directory
 ```
 
 ## Installation
-```
+```shell
 # Download OpenVPN Panel
 git clone https://github.com/nathan-fiscaletti/openvpn-panel.git
 cd openvpn-panel
@@ -48,27 +48,27 @@ sudo ./openvpnpanel --start
 ## Commands
 
 ### Start the panel
-```
+```shell
 openvpnpanel --start
 ```
 
 ### Stop the panel
-```
+```shell
 openvpnpanel --stop
 ```
 
 ### Get the status of the Panel
-```
+```shell
 openvpnpanel --status
 ```
 
 ### Add Panel User
-```
+```shell
 openvpnpanel --adduser [name] [password]
 ```
 
 ### Remove Panel User
-```
+```shell
 openvpnpanel --deleteuser [name]
 ```
 
