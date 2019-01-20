@@ -1,4 +1,4 @@
-# OpenVPN Panel
+# OpenVPN Panel Test
 A web panel for controlling an OpenVPN server
 
 ## Setup
