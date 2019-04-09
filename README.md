@@ -1,6 +1,8 @@
 # OpenVPN Panel
 A web panel for controlling an OpenVPN server
 
+![Preview](https://i.imgur.com/6GKvCdr.png)
+
 ## Setup
 
 Add this direcory to your path variable either in `~/.bashrc` or using
